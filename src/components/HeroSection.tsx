@@ -13,36 +13,36 @@ const HeroSection = () => {
   };
 
   return (
-    <div className="relative min-h-screen flex items-center bg-gradient-to-br from-expo-blue via-expo-blue/90 to-expo-lightblue">
+    <div className="relative min-h-screen flex items-center bg-[#101a40]">
       <div
-        className="absolute inset-0 z-0 opacity-20"
+        className="absolute inset-0 z-0 opacity-30"
         style={{
-          backgroundImage: "url('https://images.unsplash.com/photo-1581094794329-c8112a89af12?q=80&w=2070')",
+          backgroundImage: "url('/lovable-uploads/fbf73c34-f2c6-4e8d-afde-b534289c6d5a.png')",
           backgroundSize: 'cover',
           backgroundPosition: 'center',
+          backgroundRepeat: 'repeat',
         }}
       ></div>
       
-      <div className="container mx-auto px-4 z-10">
-        <div className="max-w-4xl mx-auto text-center">
-          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-            EXPO INGENIERÍAS
-          </h1>
-          <p className="text-xl md:text-2xl font-light text-white/90 mb-8">
-            ¡La mayor experiencia vivencial donde la innovación y la ingeniería se encuentran!
-          </p>
-          <div className="flex flex-col sm:flex-row justify-center gap-4">
-            <Link to="/convocatoria">
-              <Button className="bg-expo-orange hover:bg-expo-orange/90 text-white px-8 py-6 text-lg">
-                Convocatoria AD24
-              </Button>
-            </Link>
-            <Link to="/proyectos">
-              <Button variant="outline" className="border-white text-white hover:bg-white/10 px-8 py-6 text-lg">
-                Ver Proyectos
-              </Button>
-            </Link>
+      <div className="container mx-auto px-4 z-10 flex flex-col items-center text-center">
+        <div className="max-w-5xl mx-auto">
+          <div className="mb-8">
+            <img 
+              src="/lovable-uploads/a67a9f96-389e-44d4-b717-7db472f62633.png" 
+              alt="Expo Ingenierías" 
+              className="max-w-full h-auto w-3/4 md:w-1/2 mx-auto"
+            />
           </div>
+          
+          <p className="text-xl md:text-3xl font-light text-white mb-8">
+            ¡La mayor experiencia vivencial!
+          </p>
+          
+          <Button 
+            className="bg-[#00a3e0] hover:bg-[#0085b7] text-white px-10 py-6 text-xl rounded-md"
+          >
+            Ver más
+          </Button>
         </div>
       </div>
       
