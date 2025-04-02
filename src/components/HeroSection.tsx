@@ -13,7 +13,7 @@ const HeroSection = () => {
   };
 
   return (
-    <div className="relative min-h-screen flex items-center bg-gradient-to-br from-expo-blue via-expo-blue/90 to-expo-lightblue">
+    <div className="relative min-h-screen flex items-center bg-expo-blue">
       <div
         className="absolute inset-0 z-0 opacity-20"
         style={{
@@ -33,7 +33,7 @@ const HeroSection = () => {
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-4">
             <Link to="/convocatoria">
-              <Button className="bg-expo-orange hover:bg-expo-orange/90 text-white px-8 py-6 text-lg">
+              <Button className="bg-expo-lightblue hover:bg-expo-lightblue/90 text-white px-8 py-6 text-lg">
                 Convocatoria AD24
               </Button>
             </Link>

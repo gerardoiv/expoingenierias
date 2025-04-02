@@ -18,16 +18,16 @@ const Footer = () => {
             <h3 className="text-xl font-bold mb-4 text-white">Enlaces Rápidos</h3>
             <ul className="space-y-2">
               <li>
-                <Link to="/" className="text-gray-300 hover:text-white transition-colors">Inicio</Link>
+                <Link to="/" className="text-gray-300 hover:text-expo-lightblue transition-colors">Inicio</Link>
               </li>
               <li>
-                <Link to="/categorias" className="text-gray-300 hover:text-white transition-colors">Categorías</Link>
+                <Link to="/categorias" className="text-gray-300 hover:text-expo-lightblue transition-colors">Categorías</Link>
               </li>
               <li>
-                <Link to="/convocatoria" className="text-gray-300 hover:text-white transition-colors">Convocatoria</Link>
+                <Link to="/convocatoria" className="text-gray-300 hover:text-expo-lightblue transition-colors">Convocatoria</Link>
               </li>
               <li>
-                <Link to="/proyectos" className="text-gray-300 hover:text-white transition-colors">Proyectos</Link>
+                <Link to="/proyectos" className="text-gray-300 hover:text-expo-lightblue transition-colors">Proyectos</Link>
               </li>
             </ul>
           </div>
@@ -35,13 +35,13 @@ const Footer = () => {
             <h3 className="text-xl font-bold mb-4 text-white">Contacto</h3>
             <p className="text-gray-300 mb-4">Mantente conectado en nuestras redes sociales para las últimas actualizaciones.</p>
             <div className="flex space-x-4">
-              <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="text-white hover:text-expo-orange">
+              <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="text-white hover:text-expo-lightblue">
                 <Instagram size={24} />
               </a>
-              <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="text-white hover:text-expo-orange">
+              <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="text-white hover:text-expo-lightblue">
                 <Facebook size={24} />
               </a>
-              <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" className="text-white hover:text-expo-orange">
+              <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" className="text-white hover:text-expo-lightblue">
                 <Youtube size={24} />
               </a>
             </div>
