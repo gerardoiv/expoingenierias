@@ -3,6 +3,7 @@ import React from 'react';
 import HeroSection from '@/components/HeroSection';
 import EventCard from '@/components/EventCard';
 import CategoryCard from '@/components/CategoryCard';
+import ImportantDates from '@/components/ImportantDates';
 import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom';
 
@@ -74,6 +75,8 @@ const Index = () => {
           </div>
         </div>
       </section>
+      
+      <ImportantDates />
       
       <section className="container-section bg-expo-lightgray">
         <h2 className="section-heading">Exposición</h2>
