@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
@@ -54,7 +53,7 @@ const LoginForm = () => {
           <div className="space-y-2">
             <div className="flex items-center justify-between">
               <Label htmlFor="password">Contraseña</Label>
-              <Link to="/recuperar-password" className="text-xs text-expo-blue hover:text-expo-orange">
+              <Link to="/recuperar-password" className="text-xs text-expo-blue hover:text-expo-lightblue">
                 ¿Olvidaste tu contraseña?
               </Link>
             </div>
@@ -74,8 +73,8 @@ const LoginForm = () => {
       <CardFooter className="flex-col">
         <div className="flex items-center gap-2 mt-4 justify-center w-full">
           <div className="text-sm text-gray-600">¿No tienes una cuenta?</div>
-          <Link to="/registro" className="text-sm font-semibold text-expo-blue hover:text-expo-orange">
-            Registrarte
+          <Link to="/registro" className="text-sm font-semibold text-expo-blue hover:text-expo-lightblue">
+            Crear una cuenta
           </Link>
         </div>
       </CardFooter>

@@ -1,4 +1,3 @@
-
 import React from 'react';
 
 interface TimelineEvent {
@@ -24,7 +23,7 @@ const Timeline = ({ events }: TimelineProps) => {
             <div className="timeline-dot"></div>
             
             {/* Event content */}
-            <div className="bg-white p-5 rounded-lg shadow-md border-l-4 border-expo-orange">
+            <div className="bg-white p-5 rounded-lg shadow-md border-l-4 border-expo-lightblue">
               <h3 className="font-bold text-lg text-expo-blue">{event.date}</h3>
               <p className="mt-2 text-gray-700">{event.title}</p>
             </div>

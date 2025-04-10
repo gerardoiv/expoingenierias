@@ -9,7 +9,7 @@ const Footer = () => {
       <div className="container mx-auto px-4">
         <div className="flex justify-center mb-8">
           <img 
-            src="/public/lovable-uploads/e5965530-7698-4137-9b1f-01fb9624fde0.png" 
+            src="/public/lovable-uploads/5a8dc511-1d4d-4b9b-8d70-4470cbf1bc63.png" 
             alt="Expo Ingenierías Logo" 
             className="h-16"
           />

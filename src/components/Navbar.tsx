@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Menu, X, Instagram, Facebook, Youtube, ChevronDown } from 'lucide-react';
+import { Menu, X, ChevronDown } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import {
   NavigationMenu,
@@ -20,15 +20,6 @@ const Navbar = () => {
   const navLinks = [
     { name: 'Inicio', path: '/' },
     { 
-      name: 'Medalleros', 
-      path: '/medalleros',
-      dropdown: [
-        { name: 'Medallero 2023', path: '/medalleros/2023' },
-        { name: 'Medallero 2022', path: '/medalleros/2022' },
-        { name: 'Medallero 2021', path: '/medalleros/2021' },
-      ]
-    },
-    { 
       name: 'Ganadores', 
       path: '/ganadores',
       dropdown: [
@@ -39,12 +30,6 @@ const Navbar = () => {
     },
     { name: 'Convocatoria AD24', path: '/convocatoria' },
     { name: 'Proyectos', path: '/proyectos' },
-  ];
-
-  const socialLinks = [
-    { icon: Instagram, url: 'https://instagram.com' },
-    { icon: Facebook, url: 'https://facebook.com' },
-    { icon: Youtube, url: 'https://youtube.com' },
   ];
 
   useEffect(() => {
@@ -75,23 +60,9 @@ const Navbar = () => {
           />
         </Link>
 
-        <div className="hidden md:flex items-center space-x-8">
-          <div className="hidden md:flex space-x-1">
-            {socialLinks.map((social, index) => (
-              <a
-                key={index}
-                href={social.url}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="p-2 text-expo-gray hover:text-expo-lightblue transition-colors"
-              >
-                <social.icon size={20} />
-              </a>
-            ))}
-          </div>
-
+        <div className="hidden md:flex items-center space-x-12">
           <NavigationMenu>
-            <NavigationMenuList>
+            <NavigationMenuList className="space-x-8">
               {navLinks.map((link) => (
                 <NavigationMenuItem key={link.name}>
                   {link.dropdown ? (
@@ -193,20 +164,6 @@ const Navbar = () => {
             <Link to="/login" className="pt-2" onClick={() => setIsOpen(false)}>
               <Button className="w-full bg-expo-blue text-white hover:bg-expo-lightblue">Acceso</Button>
             </Link>
-          </div>
-
-          <div className="flex justify-center space-x-6 mt-6">
-            {socialLinks.map((social, index) => (
-              <a
-                key={index}
-                href={social.url}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="p-2 text-expo-gray hover:text-expo-lightblue"
-              >
-                <social.icon size={20} />
-              </a>
-            ))}
           </div>
         </div>
       )}

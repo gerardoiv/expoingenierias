@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
@@ -150,7 +149,7 @@ const RegisterForm = () => {
       <CardFooter className="flex justify-center">
         <div className="text-sm text-gray-600">
           ¿Ya tienes una cuenta?{" "}
-          <Link to="/login" className="font-semibold text-expo-blue hover:text-expo-orange">
+          <Link to="/login" className="font-semibold text-expo-blue hover:text-expo-lightblue">
             Iniciar sesión
           </Link>
         </div>

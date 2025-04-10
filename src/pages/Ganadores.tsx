@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Card, CardContent } from '@/components/ui/card';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
@@ -134,7 +133,7 @@ const Ganadores = () => {
                           
                           <div className="mt-4">
                             <div className="flex items-center gap-2 mb-2">
-                              <Users size={16} className="text-expo-orange" />
+                              <Users size={16} className="text-expo-lightblue" />
                               <h4 className="font-semibold text-sm">Equipo {project.team}</h4>
                             </div>
                             <div className="flex flex-wrap gap-1">

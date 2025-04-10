@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom';
@@ -18,12 +17,12 @@ const HeroSection = () => {
       <div
         className="absolute inset-0 z-0 bg-cover bg-center"
         style={{
-          backgroundImage: "url('/lovable-uploads/96e41755-d178-4a30-a6c0-c923e1c1e6a3.png')",
+          backgroundImage: "url('/lovable-uploads/IMG_5737.JPG')",
         }}
       ></div>
       
       {/* Capa blanca semitransparente */}
-      <div className="absolute inset-0 z-0 bg-white opacity-60"></div>
+      <div className="absolute inset-0 z-0 bg-white opacity-40"></div>
       
       <div className="container mx-auto px-4 z-10 relative">
         <div className="max-w-4xl mx-auto text-center">

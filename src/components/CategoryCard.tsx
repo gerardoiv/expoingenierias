@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
@@ -35,7 +34,7 @@ const CategoryCard = ({ id, title, description, fullDescription }: CategoryCardP
       <CardFooter>
         <Button 
           variant="ghost" 
-          className="w-full flex items-center justify-center gap-1 text-expo-blue hover:text-expo-orange"
+          className="w-full flex items-center justify-center gap-1 text-expo-blue hover:text-expo-lightblue"
           onClick={() => setExpanded(!expanded)}
         >
           {expanded ? (

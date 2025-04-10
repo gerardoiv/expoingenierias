@@ -1,4 +1,3 @@
-
 import React from 'react';
 import HeroSection from '@/components/HeroSection';
 import EventCard from '@/components/EventCard';
@@ -120,7 +119,7 @@ const Index = () => {
             </p>
             <div className="flex justify-center">
               <Link to="/convocatoria">
-                <Button className="bg-expo-orange hover:bg-expo-orange/90 text-white text-lg px-8 py-6">
+                <Button className="bg-expo-lightblue hover:bg-expo-lightblue/90 text-white text-lg px-8 py-6">
                   Consultar convocatoria
                 </Button>
               </Link>

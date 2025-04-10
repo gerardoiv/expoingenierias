@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
@@ -38,7 +37,7 @@ const ProjectCard = ({
       )}
       <CardHeader>
         <div className="flex justify-between items-start">
-          <Badge variant="outline" className="bg-expo-lightblue/10 text-expo-blue">
+          <Badge variant="outline" className="bg-expo-lightblue/10 text-expo-lightblue">
             {category}
           </Badge>
           <Badge variant="outline" className="bg-expo-orange/10 text-expo-orange">
