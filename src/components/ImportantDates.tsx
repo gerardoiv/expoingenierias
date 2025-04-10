@@ -29,49 +29,49 @@ const ImportantDates = () => {
       date: '31/10/2024',
       title: 'Apertura de sistema de registro.',
       description: '',
-      icon: <FileText className="w-10 h-10 text-expo-blue" />
+      icon: <FileText className="w-10 h-10 text-expo-lightblue" />
     },
     {
       date: '21/11/2024',
       title: 'Cierre de registro CCM.',
       description: '28/11/2024 Cierre de registro CSF y TOL.',
-      icon: <FileText className="w-10 h-10 text-expo-blue" />
+      icon: <FileText className="w-10 h-10 text-expo-lightblue" />
     },
     {
       date: '22/11/2024',
       title: 'Límite para entrega de póster',
       description: 'digital y video en CCM.',
-      icon: <Monitor className="w-10 h-10 text-expo-blue" />
+      icon: <Monitor className="w-10 h-10 text-expo-lightblue" />
     },
     {
       date: '29/11/2024',
       title: 'Límite para entrega de póster',
       description: 'digital y video en CSF y TOL.',
-      icon: <Monitor className="w-10 h-10 text-expo-blue" />
+      icon: <Monitor className="w-10 h-10 text-expo-lightblue" />
     },
     {
       date: '27/11/2024',
       title: '4ta Expo ingenierías región CDMX',
       description: 'Campus Ciudad de México',
-      icon: <Presentation className="w-10 h-10 text-expo-blue" />
+      icon: <Presentation className="w-10 h-10 text-expo-lightblue" />
     },
     {
       date: '29/11/2024',
       title: '4ta Expo ingenierías región CDMX',
       description: 'Campus Estado de México',
-      icon: <Presentation className="w-10 h-10 text-expo-blue" />
+      icon: <Presentation className="w-10 h-10 text-expo-lightblue" />
     },
     {
       date: '02/12/2024',
       title: '4ta Expo ingenierías región CDMX',
       description: 'Campus Santa Fe',
-      icon: <Presentation className="w-10 h-10 text-expo-blue" />
+      icon: <Presentation className="w-10 h-10 text-expo-lightblue" />
     },
     {
       date: '05/12/2024',
       title: '4ta Expo ingenierías región CDMX',
       description: 'Campus Toluca',
-      icon: <Presentation className="w-10 h-10 text-expo-blue" />
+      icon: <Presentation className="w-10 h-10 text-expo-lightblue" />
     }
   ];
 
@@ -79,7 +79,7 @@ const ImportantDates = () => {
     <section className="container-section bg-white py-16">
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-center mb-12">
-          <Calendar className="text-expo-blue w-12 h-12 mr-4" />
+          <Calendar className="text-expo-lightblue w-12 h-12 mr-4" />
           <h2 className="text-4xl md:text-5xl font-bold text-expo-blue">Fechas Importantes</h2>
         </div>
         

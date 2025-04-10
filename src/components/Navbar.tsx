@@ -78,7 +78,11 @@ const Navbar = () => {
     >
       <div className="container mx-auto px-4 flex justify-between items-center">
         <Link to="/" className="flex items-center">
-          <span className="font-bold text-xl md:text-2xl text-expo-blue">EXPO INGENIERÍAS</span>
+          <img 
+            src="/public/lovable-uploads/e5965530-7698-4137-9b1f-01fb9624fde0.png" 
+            alt="Expo Ingenierías Logo" 
+            className="h-12"
+          />
         </Link>
 
         <div className="hidden md:flex items-center space-x-8">

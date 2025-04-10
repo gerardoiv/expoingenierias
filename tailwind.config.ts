@@ -64,9 +64,9 @@ export default {
 					ring: 'hsl(var(--sidebar-ring))'
 				},
 				expo: {
-					blue: '#1a1e5d', // Darker navy blue from the image
+					blue: '#1a1e5d', // El azul marino del logo
 					orange: '#f97316',
-					lightblue: '#00a7e7', // Bright cyan blue from the image
+					lightblue: '#00a7e7', // El azul claro del logo
 					gray: '#64748b',
 					lightgray: '#f1f5f9',
 				}
