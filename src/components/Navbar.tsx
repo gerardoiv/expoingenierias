@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Menu, X, Instagram, Facebook, Youtube, ChevronDown } from 'lucide-react';
@@ -38,15 +37,6 @@ const Navbar = () => {
         { name: 'Ganadores 2021', path: '/ganadores/2021' },
       ]
     },
-    { 
-      name: 'Categorías', 
-      path: '/categorias',
-      dropdown: [
-        { name: 'Ingeniería Industrial', path: '/categorias/industrial' },
-        { name: 'Ingeniería Mecánica', path: '/categorias/mecanica' },
-        { name: 'Ingeniería Civil', path: '/categorias/civil' },
-      ]
-    },
     { name: 'Convocatoria AD24', path: '/convocatoria' },
     { name: 'Proyectos', path: '/proyectos' },
   ];
@@ -79,7 +69,7 @@ const Navbar = () => {
       <div className="container mx-auto px-4 flex justify-between items-center">
         <Link to="/" className="flex items-center">
           <img 
-            src="/public/lovable-uploads/e5965530-7698-4137-9b1f-01fb9624fde0.png" 
+            src="/lovable-uploads/e5965530-7698-4137-9b1f-01fb9624fde0.png" 
             alt="Expo Ingenierías Logo" 
             className="h-12"
           />

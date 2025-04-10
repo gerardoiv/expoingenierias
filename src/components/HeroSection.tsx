@@ -16,11 +16,9 @@ const HeroSection = () => {
     <div className="relative min-h-screen flex items-center">
       {/* Imagen de fondo */}
       <div
-        className="absolute inset-0 z-0"
+        className="absolute inset-0 z-0 bg-cover bg-center"
         style={{
-          backgroundImage: "url('/lovable-uploads/03b40667-8287-43b5-be36-2f138dfee2dd.png')",
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
+          backgroundImage: "url('/lovable-uploads/96e41755-d178-4a30-a6c0-c923e1c1e6a3.png')",
         }}
       ></div>
       
