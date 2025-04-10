@@ -18,20 +18,20 @@ const HeroSection = () => {
       <div
         className="absolute inset-0 z-0"
         style={{
-          backgroundImage: "url('/public/lovable-uploads/03b40667-8287-43b5-be36-2f138dfee2dd.png')",
+          backgroundImage: "url('/lovable-uploads/03b40667-8287-43b5-be36-2f138dfee2dd.png')",
           backgroundSize: 'cover',
           backgroundPosition: 'center',
         }}
       ></div>
       
       {/* Capa blanca semitransparente */}
-      <div className="absolute inset-0 z-0 bg-white opacity-85"></div>
+      <div className="absolute inset-0 z-0 bg-white opacity-60"></div>
       
       <div className="container mx-auto px-4 z-10 relative">
         <div className="max-w-4xl mx-auto text-center">
           <div className="flex justify-center mb-8">
             <img 
-              src="/public/lovable-uploads/e5965530-7698-4137-9b1f-01fb9624fde0.png" 
+              src="/lovable-uploads/e5965530-7698-4137-9b1f-01fb9624fde0.png" 
               alt="Expo Ingenierías Logo" 
               className="w-full max-w-lg"
             />
@@ -54,7 +54,7 @@ const HeroSection = () => {
           
           <div className="mt-12">
             <img 
-              src="/public/lovable-uploads/5a8dc511-1d4d-4b9b-8d70-4470cbf1bc63.png" 
+              src="/lovable-uploads/5a8dc511-1d4d-4b9b-8d70-4470cbf1bc63.png" 
               alt="Tec Ingenierías Logo" 
               className="h-16 mx-auto"
             />
