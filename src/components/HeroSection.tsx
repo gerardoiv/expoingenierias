@@ -13,8 +13,21 @@ const HeroSection = () => {
   };
 
   return (
-    <div className="relative min-h-screen flex items-center bg-white">
-      <div className="container mx-auto px-4 z-10">
+    <div className="relative min-h-screen flex items-center">
+      {/* Imagen de fondo */}
+      <div
+        className="absolute inset-0 z-0"
+        style={{
+          backgroundImage: "url('/public/lovable-uploads/03b40667-8287-43b5-be36-2f138dfee2dd.png')",
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+        }}
+      ></div>
+      
+      {/* Capa blanca semitransparente */}
+      <div className="absolute inset-0 z-0 bg-white opacity-85"></div>
+      
+      <div className="container mx-auto px-4 z-10 relative">
         <div className="max-w-4xl mx-auto text-center">
           <div className="flex justify-center mb-8">
             <img 
