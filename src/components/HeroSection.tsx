@@ -49,13 +49,6 @@ const HeroSection = () => {
             </Link>
           </div>
           
-          <div className="mt-12">
-            <img 
-              src="/lovable-uploads/5a8dc511-1d4d-4b9b-8d70-4470cbf1bc63.png" 
-              alt="Tec Ingenierías Logo" 
-              className="h-16 mx-auto"
-            />
-          </div>
         </div>
       </div>
       
