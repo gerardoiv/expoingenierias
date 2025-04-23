@@ -26,25 +26,31 @@ const HeroSection = () => {
       
       <div className="container mx-auto px-4 z-10 relative">
         <div className="max-w-4xl mx-auto text-center">
-          <div className="mb-8 inline-block">
+          <div className="mb-4 inline-block"> {/* Reduced margin-bottom from mb-8 to mb-4 */}
             <div className="relative">
+              {/* Shadow layer first (below) */}
+              <div className="absolute inset-0 w-full max-w-lg mx-auto z-0">
+                <img 
+                  src="/lovable-uploads/e5965530-7698-4137-9b1f-01fb9624fde0.png" 
+                  alt="" 
+                  className="w-full drop-shadow-2xl blur-sm opacity-70 translate-x-2 translate-y-2"
+                  style={{ filter: 'drop-shadow(0 4px 6px rgba(0,0,0,0.7))' }}
+                />
+              </div>
+              
+              {/* Main logo on top */}
               <img 
                 src="/lovable-uploads/e5965530-7698-4137-9b1f-01fb9624fde0.png" 
                 alt="Expo Ingenierías Logo" 
                 className="w-full max-w-lg mx-auto relative z-10"
               />
-              <div className="absolute inset-0 w-full max-w-lg mx-auto z-0 blur-md opacity-40 transform translate-x-1 translate-y-1">
-                <img 
-                  src="/lovable-uploads/e5965530-7698-4137-9b1f-01fb9624fde0.png" 
-                  alt="" 
-                  className="w-full"
-                />
-              </div>
             </div>
           </div>
-          <p className="text-xl md:text-2xl font-light text-white mb-8 drop-shadow-md inline-block">
+          
+          <p className="text-xl md:text-2xl font-light text-white mb-6 drop-shadow-md inline-block"> {/* Reduced margin-bottom from mb-8 to mb-6 */}
             ¡La mayor experiencia vivencial donde la innovación y la ingeniería se encuentran!
           </p>
+          
           <div className="flex flex-col sm:flex-row justify-center gap-4">
             <Link to="/convocatoria">
               <Button className="bg-expo-lightblue hover:bg-expo-lightblue/90 text-white px-8 py-6 text-lg">
