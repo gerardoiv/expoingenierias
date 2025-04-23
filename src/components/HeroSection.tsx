@@ -26,7 +26,7 @@ const HeroSection = () => {
       
       <div className="container mx-auto px-4 z-10 relative">
         <div className="max-w-4xl mx-auto text-center">
-          <div className="mb-4 inline-block">
+          <div className="mb-1 inline-block"> {/* Reducido de mb-4 a mb-1 */}
             {/* Logo con contorno blanco */}
             <div className="relative">
               <img 
