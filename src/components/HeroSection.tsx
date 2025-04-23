@@ -34,7 +34,7 @@ const HeroSection = () => {
                 alt="Expo Ingenierías Logo" 
                 className="w-full max-w-lg mx-auto relative z-10"
                 style={{
-                  filter: 'drop-shadow(0 0 0.5px white) drop-shadow(0 0 0.5px white) drop-shadow(0 0 0.5px white) drop-shadow(0 0 0.5px white)'
+                  filter: 'drop-shadow(0 0 0.2px white) drop-shadow(0 0 0.2px white) drop-shadow(0 0 0.2px white) drop-shadow(0 0 0.2px white)'
                 }}
               />
             </div>
