@@ -5,6 +5,7 @@ import CategoryCard from '@/components/CategoryCard';
 import ImportantDates from '@/components/ImportantDates';
 import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom';
+import { building2, mapPin, calendar, clock } from 'lucide-react';
 
 const Index = () => {
   const events = [
@@ -71,12 +72,51 @@ const Index = () => {
       
       <ImportantDates />
       
-      <section className="container-section bg-expo-lightgray">
-        <h2 className="section-heading">Exposición</h2>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-          {events.map((event, index) => (
-            <EventCard key={index} {...event} />
-          ))}
+      <section className="container-section bg-gradient-to-b from-white via-white to-expo-lightblue/5 relative overflow-hidden">
+        <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?q=80&w=2070')] opacity-5 bg-cover bg-center" />
+        <div className="relative z-10">
+          <h2 className="section-heading">Exposición</h2>
+          <div className="max-w-4xl mx-auto">
+            {events.map((event, index) => (
+              <div 
+                key={index}
+                className="group bg-white rounded-2xl p-8 shadow-lg hover:shadow-expo-lightblue/20 transition-all duration-300 border border-gray-100 hover:border-expo-lightblue animate-fade-in"
+              >
+                <div className="grid md:grid-cols-2 gap-8 items-center">
+                  <div className="space-y-4">
+                    <div className="inline-flex items-center space-x-2 text-expo-blue">
+                      <div className="p-2 rounded-lg bg-expo-lightblue/10">
+                        <building2 className="w-6 h-6 text-expo-lightblue" />
+                      </div>
+                      <h3 className="text-2xl font-bold">{event.campus}</h3>
+                    </div>
+                    <div className="space-y-2">
+                      <div className="flex items-center space-x-2 text-gray-600">
+                        <mapPin className="w-5 h-5" />
+                        <span>{event.location}</span>
+                      </div>
+                      <div className="flex items-center space-x-2 text-gray-600">
+                        <calendar className="w-5 h-5" />
+                        <span>{event.date}</span>
+                      </div>
+                      <div className="flex items-center space-x-2 text-gray-600">
+                        <clock className="w-5 h-5" />
+                        <span>{event.time}</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="text-center md:text-right">
+                    <Link to="/convocatoria">
+                      <Button className="bg-expo-blue hover:bg-expo-lightblue text-white font-semibold px-8 py-6">
+                        Más información
+                      </Button>
+                    </Link>
+                  </div>
+                </div>
+                <div className="absolute inset-0 bg-gradient-to-r from-expo-lightblue/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-2xl" />
+              </div>
+            ))}
+          </div>
         </div>
       </section>
       
