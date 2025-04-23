@@ -10,14 +10,12 @@ const Footer = () => {
               <img 
                 src="/lovable-uploads/e5965530-7698-4137-9b1f-01fb9624fde0.png" 
                 alt="Expo Ingenierías Logo" 
-                className="w-full max-w-lg mx-auto relative z-10"
+                className="h-20 mx-auto relative z-10" /* Cambiado de w-full max-w-lg a h-20 para hacerlo mucho más pequeño */
                 style={{
                   filter: 'drop-shadow(0 0 0.2px white) drop-shadow(0 0 0.2px white) drop-shadow(0 0 0.2px white) drop-shadow(0 0 0.2px white)',
-                  marginBottom: '-20px' /* Margin negativo para acercar aún más */
                 }}
               />
         </div>
-
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
           <div>
             <h3 className="text-xl font-bold mb-4 text-white">Expo Ingenierías</h3>
