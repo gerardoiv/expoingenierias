@@ -31,7 +31,7 @@ const HeroSection = () => {
             <img 
               src="/lovable-uploads/e5965530-7698-4137-9b1f-01fb9624fde0.png" 
               alt="Expo Ingenierías Logo" 
-              className="w-full max-w-lg mx-auto"
+              className="w-full max-w-lg mx-auto drop-shadow-xl"
             />
           </div>
           <p className="text-xl md:text-2xl font-light text-white mb-8 drop-shadow-md inline-block">
