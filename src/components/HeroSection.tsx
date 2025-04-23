@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom';
@@ -28,11 +27,20 @@ const HeroSection = () => {
       <div className="container mx-auto px-4 z-10 relative">
         <div className="max-w-4xl mx-auto text-center">
           <div className="mb-8 inline-block">
-            <img 
-              src="/lovable-uploads/e5965530-7698-4137-9b1f-01fb9624fde0.png" 
-              alt="Expo Ingenierías Logo" 
-              className="w-full max-w-lg mx-auto drop-shadow-xl"
-            />
+            <div className="relative">
+              <img 
+                src="/lovable-uploads/e5965530-7698-4137-9b1f-01fb9624fde0.png" 
+                alt="Expo Ingenierías Logo" 
+                className="w-full max-w-lg mx-auto relative z-10"
+              />
+              <div className="absolute inset-0 w-full max-w-lg mx-auto z-0 blur-md opacity-40 transform translate-x-1 translate-y-1">
+                <img 
+                  src="/lovable-uploads/e5965530-7698-4137-9b1f-01fb9624fde0.png" 
+                  alt="" 
+                  className="w-full"
+                />
+              </div>
+            </div>
           </div>
           <p className="text-xl md:text-2xl font-light text-white mb-8 drop-shadow-md inline-block">
             ¡La mayor experiencia vivencial donde la innovación y la ingeniería se encuentran!
@@ -74,4 +82,3 @@ const HeroSection = () => {
 };
 
 export default HeroSection;
-
