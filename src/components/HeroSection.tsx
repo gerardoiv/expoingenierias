@@ -14,9 +14,9 @@ const HeroSection = () => {
 
   return (
     <div className="relative min-h-screen flex items-center">
-      {/* Background image with darker overlay */}
+      {/* Background image with soft white shadow */}
       <div
-        className="absolute inset-0 z-0 bg-cover bg-center"
+        className="absolute inset-0 z-0 bg-cover bg-center shadow-[0_0_50px_rgba(255,255,255,0.3)]"
         style={{
           backgroundImage: "url('/lovable-uploads/IMG_5737.JPG')",
         }}
@@ -27,14 +27,14 @@ const HeroSection = () => {
       
       <div className="container mx-auto px-4 z-10 relative">
         <div className="max-w-4xl mx-auto text-center">
-          <div className="bg-white/90 p-8 rounded-2xl backdrop-blur-sm mb-8 inline-block">
+          <div className="mb-8 inline-block">
             <img 
               src="/lovable-uploads/e5965530-7698-4137-9b1f-01fb9624fde0.png" 
               alt="Expo Ingenierías Logo" 
               className="w-full max-w-lg mx-auto"
             />
           </div>
-          <p className="text-xl md:text-2xl font-light text-white mb-8 bg-expo-blue/80 py-4 px-6 rounded-xl backdrop-blur-sm inline-block">
+          <p className="text-xl md:text-2xl font-light text-white mb-8 drop-shadow-md inline-block">
             ¡La mayor experiencia vivencial donde la innovación y la ingeniería se encuentran!
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-4">
@@ -74,3 +74,4 @@ const HeroSection = () => {
 };
 
 export default HeroSection;
+
