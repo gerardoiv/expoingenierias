@@ -27,14 +27,14 @@ const HeroSection = () => {
       <div className="container mx-auto px-4 z-10 relative">
         <div className="max-w-4xl mx-auto text-center">
           <div className="mb-4 inline-block">
-            {/* Logo con sombra estilizada */}
+            {/* Logo con sombra blanca */}
             <div className="relative">
               <img 
                 src="/lovable-uploads/e5965530-7698-4137-9b1f-01fb9624fde0.png" 
                 alt="Expo Ingenierías Logo" 
                 className="w-full max-w-lg mx-auto relative z-10"
                 style={{
-                  filter: 'drop-shadow(0 8px 8px rgba(0, 0, 0, 0.8))',
+                  filter: 'drop-shadow(0 0 10px rgba(255, 255, 255, 0.8)) drop-shadow(0 0 20px rgba(255, 255, 255, 0.6))',
                 }}
               />
             </div>
