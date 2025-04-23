@@ -56,7 +56,7 @@ const Navbar = () => {
           <img 
             src="/lovable-uploads/e5965530-7698-4137-9b1f-01fb9624fde0.png" 
             alt="Expo Ingenierías Logo" 
-            className="h-12"
+            className="h-16 md:h-20"
           />
         </Link>
 
@@ -118,7 +118,6 @@ const Navbar = () => {
         </div>
       </div>
 
-      {/* Mobile menu */}
       {isOpen && (
         <div className="md:hidden bg-white pt-2 pb-4 px-4 animate-fade-in">
           <div className="flex flex-col space-y-3">
