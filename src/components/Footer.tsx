@@ -1,7 +1,6 @@
-
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Instagram, Facebook, Youtube } from 'lucide-react';
+import { Instagram, Facebook } from 'lucide-react';
 
 const Footer = () => {
   return (
@@ -49,9 +48,6 @@ const Footer = () => {
               <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="text-white hover:text-expo-lightblue">
                 <Facebook size={24} />
               </a>
-              <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" className="text-white hover:text-expo-lightblue">
-                <Youtube size={24} />
-              </a>
             </div>
           </div>
         </div>
@@ -65,7 +61,7 @@ const Footer = () => {
         </div>
         
         <div className="border-t border-gray-700 pt-6 text-center text-gray-300 text-sm">
-          <p>Organizada y administrada por el grupo estudiantil Santa Fe is the way.</p>
+          <p>Organizada y administrada por la Escuela de Ingeniería y Ciencias de Campus Santa Fe.</p>
           <p className="mt-2">© {new Date().getFullYear()} por Expo Ingenierías región CDMX.</p>
         </div>
       </div>

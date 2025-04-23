@@ -9,49 +9,43 @@ import { Link } from 'react-router-dom';
 const Index = () => {
   const events = [
     {
-      campus: 'Campus Ciudad de México (CCM)',
-      location: 'CEDETEC',
-      date: '27 de Noviembre, 2024',
-      time: '16:00 hrs'
-    },
-    {
-      campus: 'Campus Estado de México (CEM)',
-      location: 'Centro de Congresos',
-      date: '29 de Noviembre, 2024',
-      time: '10:00 hrs'
-    },
-    {
-      campus: 'Campus Santa Fe (CSF)',
-      location: 'SUM',
-      date: '2 de Diciembre, 2024',
-      time: '16:00 hrs'
-    },
-    {
-      campus: 'Campus Toluca (TOL)',
-      location: 'IGLÚ 2',
-      date: '5 de Diciembre, 2024',
-      time: '13:00 hrs'
+      campus: 'Campus Santa Fe',
+      location: 'Salón de Congresos',
+      date: '10 de Junio, 2025',
+      time: '16:00 - 19:30 hrs'
     }
   ];
 
   const categories = [
     {
       id: 1,
-      title: 'Desarrollo de propuesta de mejora',
-      description: 'Soluciones teóricas para problemas específicos',
-      fullDescription: 'Esta categoría se centra en soluciones teóricas para problemas específicos, sin requerir prototipos físicos o digitales. Las participaciones deben basarse en propuestas o uso de metodología sólida, mostrando cómo la teoría aplicada contribuye a la solución. Se valora la innovación, viabilidad y el impacto en situaciones reales.'
+      title: 'Propuestas de mejora',
+      description: 'Solución a un problema o necesidad',
+      fullDescription: 'Solución a un problema o necesidad de investigación y desarrollo de una propuesta de solución aplicando la teoría. Resultado típico: reporte, propuesta de mejora, diseño de solución o método nuevo. Evidencia: Póster.'
     },
     {
       id: 2,
-      title: 'Desarrollo de prototipo físico',
-      description: 'Diseño y construcción de prototipos funcionales',
-      fullDescription: 'Esta categoría desafía a los participantes a diseñar, construir y demostrar prototipos funcionales que ofrezcan soluciones innovadoras a problemas actuales o necesidades insatisfechas. Los proyectos pueden abarcar una amplia gama de campos de la ingeniería, desde dispositivos médicos hasta sistemas de automatización y más allá.'
+      title: 'Prototipo físico',
+      description: 'Desarrollo de prototipos funcionales',
+      fullDescription: 'Desarrollo de un prototipo físico funcional para demostrar la solución a un problema o necesidad. Resultado típico: Prototipo funcional de máquina, mecanismo, dispositivo, artefacto o similar. Evidencia: Prototipo físico y póster.'
     },
     {
       id: 3,
-      title: 'Desarrollo de prototipo digital',
+      title: 'Prototipo digital',
       description: 'Soluciones digitales innovadoras',
-      fullDescription: 'Esta categoría premia la creación innovadora de soluciones digitales, tales como software, aplicaciones, sitios web, o simuladores, todas diseñadas meticulosamente para abordar desafíos concretos. Se valora la innovación técnica, funcionalidad superior, y el impacto positivo potencial de los prototipos presentados.'
+      fullDescription: 'Desarrollo de software, app, página web, simulador, etc. para solucionar un problema. Resultado típico: Prototipo funcional de aplicación web/móvil, software, simulador. Evidencia: póster y prototipo de software o aplicación de TI funcional.'
+    },
+    {
+      id: 4,
+      title: 'Estancia de investigación/profesional',
+      description: 'Proyectos de investigación',
+      fullDescription: 'Desarrollo de metodología científica para abordar y presentar proyectos de investigación. Resultado: Artículo o ponencia. Evidencia: póster.'
+    },
+    {
+      id: 5,
+      title: 'Proyecto de fin de carrera',
+      description: 'Proyectos integradores',
+      fullDescription: 'Únicamente alumnos de último semestre en bloques integradores o multidisciplinarios. Desarrollo de un prototipo o proceso que integre las competencias disciplinares de carrera. Resultado: Nuevo producto o proceso mejorado, prototipo funcional que resuelva una necesidad industrial o comercial. Evidencia: Prototipo físico y póster.'
     }
   ];
 

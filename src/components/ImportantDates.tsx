@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Calendar, FileText, Monitor, Presentation } from 'lucide-react';
 
@@ -26,51 +25,27 @@ const DateItem = ({ date, title, description, icon }: DateItemProps) => {
 const ImportantDates = () => {
   const dates = [
     {
-      date: '31/10/2024',
-      title: 'Apertura de sistema de registro.',
+      date: '05/05/2025',
+      title: 'Apertura del sistema de registro',
       description: '',
       icon: <FileText className="w-10 h-10 text-expo-lightblue" />
     },
     {
-      date: '21/11/2024',
-      title: 'Cierre de registro CCM.',
-      description: '28/11/2024 Cierre de registro CSF y TOL.',
+      date: '23/05/2025',
+      title: 'Cierre de registro',
+      description: 'Hasta las 23:59 pm',
       icon: <FileText className="w-10 h-10 text-expo-lightblue" />
     },
     {
-      date: '22/11/2024',
+      date: '30/05/2025',
       title: 'Límite para entrega de póster',
-      description: 'digital y video en CCM.',
+      description: 'Hasta las 23:59 pm',
       icon: <Monitor className="w-10 h-10 text-expo-lightblue" />
     },
     {
-      date: '29/11/2024',
-      title: 'Límite para entrega de póster',
-      description: 'digital y video en CSF y TOL.',
-      icon: <Monitor className="w-10 h-10 text-expo-lightblue" />
-    },
-    {
-      date: '27/11/2024',
-      title: '4ta Expo ingenierías región CDMX',
-      description: 'Campus Ciudad de México',
-      icon: <Presentation className="w-10 h-10 text-expo-lightblue" />
-    },
-    {
-      date: '29/11/2024',
-      title: '4ta Expo ingenierías región CDMX',
-      description: 'Campus Estado de México',
-      icon: <Presentation className="w-10 h-10 text-expo-lightblue" />
-    },
-    {
-      date: '02/12/2024',
-      title: '4ta Expo ingenierías región CDMX',
-      description: 'Campus Santa Fe',
-      icon: <Presentation className="w-10 h-10 text-expo-lightblue" />
-    },
-    {
-      date: '05/12/2024',
-      title: '4ta Expo ingenierías región CDMX',
-      description: 'Campus Toluca',
+      date: '10/06/2025',
+      title: '5ta Expo Ingenierías Campus Santa Fe',
+      description: 'Salón de Congresos, 16:00-19:30',
       icon: <Presentation className="w-10 h-10 text-expo-lightblue" />
     }
   ];
