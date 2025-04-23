@@ -28,6 +28,7 @@ const Navbar = () => {
         { name: 'Ganadores 2021', path: '/ganadores/2021' },
       ]
     },
+    { name: 'Categorías', path: '/categorias' },
     { name: 'Convocatoria AD24', path: '/convocatoria' },
     { name: 'Proyectos', path: '/proyectos' },
   ];
