@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom';
@@ -47,12 +48,15 @@ const HeroSection = () => {
           
           <div className="flex flex-col sm:flex-row justify-center gap-4">
             <Link to="/convocatoria">
-              <Button className="bg-expo-lightblue hover:bg-expo-lightblue/90 text-white px-8 py-6 text-lg">
+              <Button className="bg-expo-lightblue hover:bg-expo-blue hover:text-white px-8 py-6 text-lg">
                 Convocatoria AD24
               </Button>
             </Link>
             <Link to="/proyectos">
-              <Button variant="outline" className="border-expo-blue text-expo-blue hover:bg-expo-blue/10 px-8 py-6 text-lg">
+              <Button 
+                variant="outline" 
+                className="border-expo-blue text-expo-blue hover:bg-expo-blue hover:text-white px-8 py-6 text-lg"
+              >
                 Ver Proyectos
               </Button>
             </Link>
