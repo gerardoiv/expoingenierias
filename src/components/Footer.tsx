@@ -7,11 +7,15 @@ const Footer = () => {
     <footer className="bg-expo-blue text-white pt-12 pb-6">
       <div className="container mx-auto px-4">
         <div className="flex justify-center mb-8">
-          <img 
-            src="/public/lovable-uploads/5a8dc511-1d4d-4b9b-8d70-4470cbf1bc63.png" 
-            alt="Expo Ingenierías Logo" 
-            className="h-16"
-          />
+              <img 
+                src="/lovable-uploads/e5965530-7698-4137-9b1f-01fb9624fde0.png" 
+                alt="Expo Ingenierías Logo" 
+                className="w-full max-w-lg mx-auto relative z-10"
+                style={{
+                  filter: 'drop-shadow(0 0 0.2px white) drop-shadow(0 0 0.2px white) drop-shadow(0 0 0.2px white) drop-shadow(0 0 0.2px white)',
+                  marginBottom: '-20px' /* Margin negativo para acercar aún más */
+                }}
+              />
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
@@ -50,14 +54,6 @@ const Footer = () => {
               </a>
             </div>
           </div>
-        </div>
-        
-        <div className="flex justify-center mb-6">
-          <img 
-            src="/public/lovable-uploads/5a8dc511-1d4d-4b9b-8d70-4470cbf1bc63.png" 
-            alt="Tec Ingenierías Logo" 
-            className="h-10"
-          />
         </div>
         
         <div className="border-t border-gray-700 pt-6 text-center text-gray-300 text-sm">
