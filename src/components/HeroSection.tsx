@@ -26,7 +26,7 @@ const HeroSection = () => {
       
       <div className="container mx-auto px-4 z-10 relative">
         <div className="max-w-4xl mx-auto text-center">
-          <div className="mb-1 inline-block"> {/* Reducido de mb-4 a mb-1 */}
+          <div className="mb-0 inline-block"> {/* Eliminado el margen inferior */}
             {/* Logo con contorno blanco */}
             <div className="relative">
               <img 
@@ -34,7 +34,8 @@ const HeroSection = () => {
                 alt="Expo Ingenierías Logo" 
                 className="w-full max-w-lg mx-auto relative z-10"
                 style={{
-                  filter: 'drop-shadow(0 0 0.2px white) drop-shadow(0 0 0.2px white) drop-shadow(0 0 0.2px white) drop-shadow(0 0 0.2px white)'
+                  filter: 'drop-shadow(0 0 0.2px white) drop-shadow(0 0 0.2px white) drop-shadow(0 0 0.2px white) drop-shadow(0 0 0.2px white)',
+                  marginBottom: '-20px' /* Margin negativo para acercar aún más */
                 }}
               />
             </div>
