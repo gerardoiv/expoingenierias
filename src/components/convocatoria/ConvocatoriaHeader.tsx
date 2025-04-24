@@ -6,7 +6,7 @@ const ConvocatoriaHeader = () => {
   return (
     <div className="bg-gradient-to-r from-expo-blue to-expo-lightblue text-white py-16 px-6 rounded-lg shadow-lg mb-12">
       <div className="max-w-4xl mx-auto text-center">
-        <h2 className="text-3xl md:text-4xl font-bold mb-6 leading-tight">
+        <h2 className="text-3xl md:text-4xl font-bold mb-6 leading-tight" styles="color:white">
           El Tecnológico de Monterrey a través de<br />
           la Escuela de Ingeniería y Ciencias de Campus Santa Fe
         </h2>
