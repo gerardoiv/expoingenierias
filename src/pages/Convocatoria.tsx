@@ -1,3 +1,4 @@
+
 import React from 'react';
 import ConvocatoriaHeader from '@/components/convocatoria/ConvocatoriaHeader';
 import ConvocatoriaSection from '@/components/convocatoria/ConvocatoriaSection';
