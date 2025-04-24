@@ -20,7 +20,7 @@ const ConvocatoriaHeader = () => {
           <div className="flex items-center justify-center gap-4">
             <Calendar className="w-10 h-10 text-white" />
             <div>
-              <h3 className="text-xl font-semibold">Febrero - Junio 2025</h3>
+              <h3 className="text-xl font-semibold text-white">Febrero - Junio 2025</h3>
               <p className="text-sm">PRESENCIAL: Campus Santa Fe (CSF)</p>
               <p className="text-sm">Martes 10 de junio del 2025</p>
               <p className="text-sm">Salón de Congresos: 16:00 a 19:30 horas</p>
