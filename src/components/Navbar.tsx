@@ -19,15 +19,6 @@ const Navbar = () => {
 
   const navLinks = [
     { name: 'Inicio', path: '/' },
-    { 
-      name: 'Ganadores', 
-      path: '/ganadores',
-      dropdown: [
-        { name: 'Ganadores 2023', path: '/ganadores/2023' },
-        { name: 'Ganadores 2022', path: '/ganadores/2022' },
-        { name: 'Ganadores 2021', path: '/ganadores/2021' },
-      ]
-    },
     { name: 'Categorías', path: '/categorias' },
     { name: 'Convocatoria AD24', path: '/convocatoria' },
     { name: 'Proyectos', path: '/proyectos' },
