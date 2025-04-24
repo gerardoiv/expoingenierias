@@ -6,7 +6,7 @@ import RegisterForm from '@/components/RegisterForm';
 
 const Login = () => {
   return (
-    <div className="min-h-screen pt-20 pb-16 bg-expo-lightgray">
+    <div className="min-h-screen pt-32 pb-16 bg-expo-lightgray">
       <div className="container mx-auto px-4">
         <div className="max-w-md mx-auto">
           <h1 className="text-3xl font-bold text-center mb-6 text-expo-blue">Acceso a Expo Ingenierías</h1>
