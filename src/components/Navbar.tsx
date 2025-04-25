@@ -1,15 +1,11 @@
-
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Menu, X, ChevronDown } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import {
   NavigationMenu,
-  NavigationMenuContent,
-  NavigationMenuItem,
-  NavigationMenuLink,
   NavigationMenuList,
-  NavigationMenuTrigger,
+  NavigationMenuItem,
 } from "@/components/ui/navigation-menu";
 import { cn } from "@/lib/utils";
 
@@ -58,40 +54,14 @@ const Navbar = () => {
             <NavigationMenuList className="space-x-8">
               {navLinks.map((link) => (
                 <NavigationMenuItem key={link.name}>
-                  {link.dropdown ? (
-                    <>
-                      <NavigationMenuTrigger className={`text-sm font-medium hover:text-expo-lightblue transition-colors ${
-                        location.pathname === link.path ? 'text-expo-lightblue' : 'text-expo-blue'
-                      }`}>
-                        {link.name}
-                      </NavigationMenuTrigger>
-                      <NavigationMenuContent>
-                        <ul className="grid w-[200px] gap-1 p-2">
-                          {link.dropdown.map((item) => (
-                            <li key={item.name}>
-                              <NavigationMenuLink asChild>
-                                <Link
-                                  to={item.path}
-                                  className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
-                                >
-                                  <div className="text-sm font-medium leading-none">{item.name}</div>
-                                </Link>
-                              </NavigationMenuLink>
-                            </li>
-                          ))}
-                        </ul>
-                      </NavigationMenuContent>
-                    </>
-                  ) : (
-                    <Link
-                      to={link.path}
-                      className={`text-sm font-medium hover:text-expo-lightblue transition-colors ${
-                        location.pathname === link.path ? 'text-expo-lightblue' : 'text-expo-blue'
-                      }`}
-                    >
-                      {link.name}
-                    </Link>
-                  )}
+                  <Link
+                    to={link.path}
+                    className={`text-sm font-medium hover:text-expo-lightblue transition-colors ${
+                      location.pathname === link.path ? 'text-expo-lightblue' : 'text-expo-blue'
+                    }`}
+                  >
+                    {link.name}
+                  </Link>
                 </NavigationMenuItem>
               ))}
             </NavigationMenuList>
@@ -115,43 +85,16 @@ const Navbar = () => {
         <div className="md:hidden bg-white pt-2 pb-4 px-4 animate-fade-in">
           <div className="flex flex-col space-y-3">
             {navLinks.map((link) => (
-              <div key={link.name} className="py-1">
-                {link.dropdown ? (
-                  <details className="group">
-                    <summary className="flex cursor-pointer items-center justify-between py-1">
-                      <span className={`text-base ${
-                        location.pathname === link.path ? 'text-expo-lightblue font-semibold' : 'text-expo-blue'
-                      }`}>
-                        {link.name}
-                      </span>
-                      <ChevronDown className="h-4 w-4 transition-transform group-open:rotate-180" />
-                    </summary>
-                    <ul className="ml-4 mt-2 space-y-2">
-                      {link.dropdown.map((item) => (
-                        <li key={item.name}>
-                          <Link
-                            to={item.path}
-                            className="text-sm text-expo-blue hover:text-expo-lightblue"
-                            onClick={() => setIsOpen(false)}
-                          >
-                            {item.name}
-                          </Link>
-                        </li>
-                      ))}
-                    </ul>
-                  </details>
-                ) : (
-                  <Link
-                    to={link.path}
-                    className={`text-base py-2 ${
-                      location.pathname === link.path ? 'text-expo-lightblue font-semibold' : 'text-expo-blue'
-                    }`}
-                    onClick={() => setIsOpen(false)}
-                  >
-                    {link.name}
-                  </Link>
-                )}
-              </div>
+              <Link
+                key={link.name}
+                to={link.path}
+                className={`text-base py-2 ${
+                  location.pathname === link.path ? 'text-expo-lightblue font-semibold' : 'text-expo-blue'
+                }`}
+                onClick={() => setIsOpen(false)}
+              >
+                {link.name}
+              </Link>
             ))}
             <Link to="/login" className="pt-2" onClick={() => setIsOpen(false)}>
               <Button className="w-full bg-expo-blue text-white hover:bg-expo-lightblue">Acceso</Button>
