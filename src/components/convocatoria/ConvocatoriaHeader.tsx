@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Calendar } from "lucide-react";
 
@@ -7,8 +6,7 @@ const ConvocatoriaHeader = () => {
     <div className="bg-gradient-to-r from-expo-blue to-expo-lightblue text-white py-16 px-6 rounded-lg shadow-lg mb-12">
       <div className="max-w-4xl mx-auto text-center">
         <h2 className="text-3xl md:text-4xl font-bold mb-6 leading-tight text-white">
-          El Tecnológico de Monterrey a través de<br />
-          la Escuela de Ingeniería y Ciencias de Campus Santa Fe
+          La escuela de ingeniería y ciencias de campus santa fe
         </h2>
         <div className="text-2xl font-semibold uppercase tracking-wider mb-6">INVITA</div>
         
