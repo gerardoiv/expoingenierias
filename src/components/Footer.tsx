@@ -10,7 +10,7 @@ const Footer = () => {
               <img 
                 src="/lovable-uploads/e5965530-7698-4137-9b1f-01fb9624fde0.png" 
                 alt="Expo Ingenierías Logo" 
-                className="h-20 mx-auto relative z-10" /* Cambiado de w-full max-w-lg a h-20 para hacerlo mucho más pequeño */
+                className="h-20 mx-auto relative z-10"
                 style={{
                   filter: 'drop-shadow(0 0 0.2px white) drop-shadow(0 0 0.2px white) drop-shadow(0 0 0.2px white) drop-shadow(0 0 0.2px white)',
                 }}
@@ -57,6 +57,17 @@ const Footer = () => {
         <div className="border-t border-gray-700 pt-6 text-center text-gray-300 text-sm">
           <p>Organizada y administrada por la Escuela de Ingeniería y Ciencias de Campus Santa Fe.</p>
           <p className="mt-2">© {new Date().getFullYear()} por Expo Ingenierías región CDMX.</p>
+          <p className="mt-2">
+            Creada por{' '}
+            <a 
+              href="https://www.astrawebdevelopers.com" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="text-expo-lightblue hover:text-white transition-colors"
+            >
+              Astra Web Developers
+            </a>
+          </p>
         </div>
       </div>
     </footer>
