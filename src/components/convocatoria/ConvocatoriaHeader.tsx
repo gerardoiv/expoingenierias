@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Calendar, FileDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -28,11 +27,18 @@ const ConvocatoriaHeader = () => {
           </div>
         </div>
 
+
         <div>
-          <Button variant="outline" className="bg-white text-expo-blue hover:bg-expo-blue hover:text-white">
-            <FileDown />
-            Descargar convocatoria
-          </Button>
+          <a 
+            href="/lovable-uploads/Expo-FJ25.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-block"
+          >
+            <Button variant="outline" className="bg-white text-expo-blue hover:bg-expo-blue hover:text-white">
+              Descargar convocatoria
+            </Button>
+          </a>
         </div>
       </div>
     </div>

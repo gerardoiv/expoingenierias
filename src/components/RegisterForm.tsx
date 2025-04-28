@@ -6,16 +6,17 @@ import { Label } from '@/components/ui/label';
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 import { toast } from 'sonner';
+import bcrypt from 'bcryptjs';
 
 const RegisterForm = () => {
   const [formData, setFormData] = useState({
-    firstName: '',
-    lastName: '',
+    name: '',
+    studentId: '',
     email: '',
     password: '',
     confirmPassword: '',
-    campus: '',
-    studentId: ''
+    semester: '',
+    career: ''
   });
   const [isLoading, setIsLoading] = useState(false);
 
@@ -24,26 +25,42 @@ const RegisterForm = () => {
     setFormData(prev => ({ ...prev, [id]: value }));
   };
 
-  const handleSelectChange = (value: string) => {
-    setFormData(prev => ({ ...prev, campus: value }));
+  const handleSelectChange = (field: string, value: string) => {
+    setFormData(prev => ({ ...prev, [field]: value }));
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const validateTecEmail = (email: string) => {
+    return email.endsWith('@tec.mx');
+  };
+
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsLoading(true);
-    
-    // Simple validation for demo
+
+    if (!validateTecEmail(formData.email)) {
+      toast.error('El correo debe ser institucional (@tec.mx)');
+      setIsLoading(false);
+      return;
+    }
     if (formData.password !== formData.confirmPassword) {
       toast.error('Las contraseñas no coinciden');
       setIsLoading(false);
       return;
     }
+    if (!formData.semester || !formData.career) {
+      toast.error('Por favor selecciona tu semestre y carrera');
+      setIsLoading(false);
+      return;
+    }
 
-    // Simulate API request
+    // Encriptar la contraseña antes de enviar
+    const hashedPassword = await bcrypt.hash(formData.password, 10);
+
+    // Simular envío de datos
     setTimeout(() => {
       setIsLoading(false);
       toast.success('¡Registro exitoso! Ahora puedes iniciar sesión.');
-      // In a real app, we would redirect to login page
+      // Aquí se enviaría: {...formData, password: hashedPassword}
     }, 1500);
   };
 
@@ -57,29 +74,26 @@ const RegisterForm = () => {
       </CardHeader>
       <CardContent>
         <form onSubmit={handleSubmit} className="space-y-4">
-          <div className="grid grid-cols-2 gap-4">
-            <div className="space-y-2">
-              <Label htmlFor="firstName">Nombre(s)</Label>
-              <Input
-                id="firstName"
-                placeholder="Juan"
-                required
-                value={formData.firstName}
-                onChange={handleChange}
-              />
-            </div>
-            <div className="space-y-2">
-              <Label htmlFor="lastName">Apellido(s)</Label>
-              <Input
-                id="lastName"
-                placeholder="Pérez"
-                required
-                value={formData.lastName}
-                onChange={handleChange}
-              />
-            </div>
+          <div className="space-y-2">
+            <Label htmlFor="name">Nombre completo</Label>
+            <Input
+              id="name"
+              placeholder="Nombre completo"
+              required
+              value={formData.name}
+              onChange={handleChange}
+            />
           </div>
-          
+          <div className="space-y-2">
+            <Label htmlFor="studentId">Matrícula</Label>
+            <Input
+              id="studentId"
+              placeholder="A01234567"
+              required
+              value={formData.studentId}
+              onChange={handleChange}
+            />
+          </div>
           <div className="space-y-2">
             <Label htmlFor="email">Correo institucional</Label>
             <Input
@@ -91,34 +105,6 @@ const RegisterForm = () => {
               onChange={handleChange}
             />
           </div>
-          
-          <div className="grid grid-cols-2 gap-4">
-            <div className="space-y-2">
-              <Label htmlFor="studentId">Matrícula</Label>
-              <Input
-                id="studentId"
-                placeholder="A01234567"
-                required
-                value={formData.studentId}
-                onChange={handleChange}
-              />
-            </div>
-            <div className="space-y-2">
-              <Label>Campus</Label>
-              <Select required value={formData.campus} onValueChange={handleSelectChange}>
-                <SelectTrigger>
-                  <SelectValue placeholder="Selecciona" />
-                </SelectTrigger>
-                <SelectContent>
-                  <SelectItem value="CCM">Ciudad de México</SelectItem>
-                  <SelectItem value="CEM">Estado de México</SelectItem>
-                  <SelectItem value="CSF">Santa Fe</SelectItem>
-                  <SelectItem value="TOL">Toluca</SelectItem>
-                </SelectContent>
-              </Select>
-            </div>
-          </div>
-          
           <div className="space-y-2">
             <Label htmlFor="password">Contraseña</Label>
             <Input
@@ -129,7 +115,6 @@ const RegisterForm = () => {
               onChange={handleChange}
             />
           </div>
-          
           <div className="space-y-2">
             <Label htmlFor="confirmPassword">Confirmar contraseña</Label>
             <Input
@@ -140,7 +125,37 @@ const RegisterForm = () => {
               onChange={handleChange}
             />
           </div>
-          
+          <div className="grid grid-cols-2 gap-4">
+            <div className="space-y-2">
+              <Label>Semestre</Label>
+              <Select required value={formData.semester} onValueChange={v => handleSelectChange('semester', v)}>
+                <SelectTrigger>
+                  <SelectValue placeholder="Selecciona" />
+                </SelectTrigger>
+                <SelectContent>
+                  {[...Array(12)].map((_, i) => (
+                    <SelectItem key={i+1} value={(i+1).toString()}>{i+1}</SelectItem>
+                  ))}
+                </SelectContent>
+              </Select>
+            </div>
+            <div className="space-y-2">
+              <Label>Carrera</Label>
+              <Select required value={formData.career} onValueChange={v => handleSelectChange('career', v)}>
+                <SelectTrigger>
+                  <SelectValue placeholder="Selecciona" />
+                </SelectTrigger>
+                <SelectContent>
+                  <SelectItem value="IMT">IMT</SelectItem>
+                  <SelectItem value="ITI">ITI</SelectItem>
+                  <SelectItem value="IRS">IRS</SelectItem>
+                  <SelectItem value="IIS">IIS</SelectItem>
+                  <SelectItem value="IBT">IBT</SelectItem>
+                  <SelectItem value="Other">Otra</SelectItem>
+                </SelectContent>
+              </Select>
+            </div>
+          </div>
           <Button type="submit" className="w-full" disabled={isLoading}>
             {isLoading ? 'Registrando...' : 'Registrarse'}
           </Button>

@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom';
@@ -47,11 +46,16 @@ const HeroSection = () => {
           </p>
           
           <div className="flex flex-col sm:flex-row justify-center gap-4">
-            <Link to="/convocatoria">
+            <a 
+              href="/lovable-uploads/Expo-FJ25.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-block"
+            >
               <Button className="bg-expo-lightblue hover:bg-expo-blue hover:text-white px-8 py-6 text-lg">
-                Convocatoria AD24
+                Convocatoria FJ25
               </Button>
-            </Link>
+            </a>
             <Link to="/proyectos">
               <Button 
                 variant="outline" 
