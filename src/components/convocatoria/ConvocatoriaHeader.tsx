@@ -1,5 +1,7 @@
+
 import React from 'react';
-import { Calendar } from "lucide-react";
+import { Calendar, FileDown } from "lucide-react";
+import { Button } from "@/components/ui/button";
 
 const ConvocatoriaHeader = () => {
   return (
@@ -14,7 +16,7 @@ const ConvocatoriaHeader = () => {
           a todas y todos sus estudiantes con el apoyo de sus docentes, a postularse como expositores en la quinta edición de
         </p>
         
-        <div className="bg-white bg-opacity-20 rounded-xl p-6 inline-block">
+        <div className="bg-white bg-opacity-20 rounded-xl p-6 inline-block mb-8">
           <div className="flex items-center justify-center gap-4">
             <Calendar className="w-10 h-10 text-white" />
             <div>
@@ -24,6 +26,13 @@ const ConvocatoriaHeader = () => {
               <p className="text-sm">Salón de Congresos: 16:00 a 19:30 horas</p>
             </div>
           </div>
+        </div>
+
+        <div>
+          <Button variant="outline" className="bg-white text-expo-blue hover:bg-expo-blue hover:text-white">
+            <FileDown />
+            Descargar convocatoria
+          </Button>
         </div>
       </div>
     </div>
