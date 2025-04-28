@@ -6,6 +6,7 @@ const Footer = () => {
   return (
     <footer className="bg-expo-blue text-white pt-12 pb-6">
       <div className="container mx-auto px-4">
+<<<<<<< HEAD
         <div className="flex justify-center mb-8">
               <img 
                 src="/lovable-uploads/e5965530-7698-4137-9b1f-01fb9624fde0.png" 
@@ -16,6 +17,9 @@ const Footer = () => {
                 }}
               />
         </div>
+=======
+
+>>>>>>> 066512a335bc38ce4046b87881d3364fd54e7a71
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
           <div>
             <h3 className="text-xl font-bold mb-4 text-white">Expo Ingenierías</h3>
