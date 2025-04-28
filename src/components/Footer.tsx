@@ -6,6 +6,7 @@ const Footer = () => {
   return (
     <footer className="bg-expo-blue text-white pt-12 pb-6">
       <div className="container mx-auto px-4">
+
         <div className="flex justify-center mb-8">
               <img 
                 src="/lovable-uploads/e5965530-7698-4137-9b1f-01fb9624fde0.png" 
@@ -37,6 +38,9 @@ const Footer = () => {
               </li>
               <li>
                 <Link to="/proyectos" className="text-gray-300 hover:text-expo-lightblue transition-colors">Proyectos</Link>
+              </li>
+              <li>
+                <Link to="/admin/login" className="text-gray-300 hover:text-expo-lightblue transition-colors">Acceso Administrador</Link>
               </li>
             </ul>
           </div>

@@ -1,159 +1,203 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 import { toast } from 'sonner';
+import { API_ENDPOINTS } from '@/config/api';
 
 const RegisterForm = () => {
+  const navigate = useNavigate();
+  const [isLoading, setIsLoading] = useState(false);
   const [formData, setFormData] = useState({
-    firstName: '',
-    lastName: '',
+    name: '',
+    studentId: '',
     email: '',
     password: '',
     confirmPassword: '',
-    campus: '',
-    studentId: ''
+    semester: '',
+    career: '',
   });
-  const [isLoading, setIsLoading] = useState(false);
+
+  const validateTecEmail = (email: string) => {
+    return email.endsWith('@tec.mx');
+  };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const { id, value } = e.target;
-    setFormData(prev => ({ ...prev, [id]: value }));
+    const { name, value } = e.target;
+    setFormData(prev => ({
+      ...prev,
+      [name]: value
+    }));
   };
 
-  const handleSelectChange = (value: string) => {
-    setFormData(prev => ({ ...prev, campus: value }));
+  const handleSelectChange = (name: string, value: string) => {
+    setFormData(prev => ({
+      ...prev,
+      [name]: value
+    }));
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsLoading(true);
-    
-    // Simple validation for demo
+
+    if (!validateTecEmail(formData.email)) {
+      toast.error('El correo debe ser institucional (@tec.mx)');
+      setIsLoading(false);
+      return;
+    }
     if (formData.password !== formData.confirmPassword) {
       toast.error('Las contraseñas no coinciden');
       setIsLoading(false);
       return;
     }
-
-    // Simulate API request
-    setTimeout(() => {
+    if (!formData.semester || !formData.career) {
+      toast.error('Por favor selecciona tu semestre y carrera');
       setIsLoading(false);
+      return;
+    }
+
+    try {
+      const response = await fetch(API_ENDPOINTS.register, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          nombre: formData.name,
+          matricula: formData.studentId,
+          email: formData.email,
+          password: formData.password,
+          semestre: parseInt(formData.semester),
+          carrera: formData.career,
+        }),
+      });
+
+      const data = await response.json();
+
+      if (!response.ok) {
+        throw new Error(data.message || 'Error en el registro');
+      }
+
       toast.success('¡Registro exitoso! Ahora puedes iniciar sesión.');
-      // In a real app, we would redirect to login page
-    }, 1500);
+      navigate('/login');
+    } catch (error) {
+      toast.error(error instanceof Error ? error.message : 'Error en el registro');
+    } finally {
+      setIsLoading(false);
+    }
   };
 
   return (
-    <Card className="w-full max-w-md mx-auto">
+    <Card>
       <CardHeader>
-        <CardTitle>Crear una cuenta</CardTitle>
+        <CardTitle>Registro</CardTitle>
         <CardDescription>
-          Regístrate para participar en Expo Ingenierías
+          Crea tu cuenta para participar en Expo Ingenierías
         </CardDescription>
       </CardHeader>
-      <CardContent>
-        <form onSubmit={handleSubmit} className="space-y-4">
-          <div className="grid grid-cols-2 gap-4">
-            <div className="space-y-2">
-              <Label htmlFor="firstName">Nombre(s)</Label>
-              <Input
-                id="firstName"
-                placeholder="Juan"
-                required
-                value={formData.firstName}
-                onChange={handleChange}
-              />
-            </div>
-            <div className="space-y-2">
-              <Label htmlFor="lastName">Apellido(s)</Label>
-              <Input
-                id="lastName"
-                placeholder="Pérez"
-                required
-                value={formData.lastName}
-                onChange={handleChange}
-              />
-            </div>
+      <form onSubmit={handleSubmit}>
+        <CardContent className="space-y-4">
+          <div className="space-y-2">
+            <Label htmlFor="name">Nombre completo</Label>
+            <Input
+              id="name"
+              name="name"
+              value={formData.name}
+              onChange={handleChange}
+              required
+            />
           </div>
-          
+          <div className="space-y-2">
+            <Label htmlFor="studentId">Matrícula</Label>
+            <Input
+              id="studentId"
+              name="studentId"
+              value={formData.studentId}
+              onChange={handleChange}
+              required
+            />
+          </div>
           <div className="space-y-2">
             <Label htmlFor="email">Correo institucional</Label>
             <Input
               id="email"
+              name="email"
               type="email"
-              placeholder="tu.correo@tec.mx"
-              required
               value={formData.email}
               onChange={handleChange}
+              required
             />
           </div>
-          
-          <div className="grid grid-cols-2 gap-4">
-            <div className="space-y-2">
-              <Label htmlFor="studentId">Matrícula</Label>
-              <Input
-                id="studentId"
-                placeholder="A01234567"
-                required
-                value={formData.studentId}
-                onChange={handleChange}
-              />
-            </div>
-            <div className="space-y-2">
-              <Label>Campus</Label>
-              <Select required value={formData.campus} onValueChange={handleSelectChange}>
-                <SelectTrigger>
-                  <SelectValue placeholder="Selecciona" />
-                </SelectTrigger>
-                <SelectContent>
-                  <SelectItem value="CCM">Ciudad de México</SelectItem>
-                  <SelectItem value="CEM">Estado de México</SelectItem>
-                  <SelectItem value="CSF">Santa Fe</SelectItem>
-                  <SelectItem value="TOL">Toluca</SelectItem>
-                </SelectContent>
-              </Select>
-            </div>
-          </div>
-          
           <div className="space-y-2">
             <Label htmlFor="password">Contraseña</Label>
             <Input
               id="password"
+              name="password"
               type="password"
-              required
               value={formData.password}
               onChange={handleChange}
+              required
             />
           </div>
-          
           <div className="space-y-2">
             <Label htmlFor="confirmPassword">Confirmar contraseña</Label>
             <Input
               id="confirmPassword"
+              name="confirmPassword"
               type="password"
-              required
               value={formData.confirmPassword}
               onChange={handleChange}
+              required
             />
           </div>
-          
+          <div className="space-y-2">
+            <Label htmlFor="semester">Semestre</Label>
+            <Select
+              value={formData.semester}
+              onValueChange={(value) => handleSelectChange('semester', value)}
+            >
+              <SelectTrigger>
+                <SelectValue placeholder="Selecciona tu semestre" />
+              </SelectTrigger>
+              <SelectContent>
+                {[1, 2, 3, 4, 5, 6, 7, 8, 9].map((sem) => (
+                  <SelectItem key={sem} value={sem.toString()}>
+                    {sem}° Semestre
+                  </SelectItem>
+                ))}
+              </SelectContent>
+            </Select>
+          </div>
+          <div className="space-y-2">
+            <Label htmlFor="career">Carrera</Label>
+            <Select
+              value={formData.career}
+              onValueChange={(value) => handleSelectChange('career', value)}
+            >
+              <SelectTrigger>
+                <SelectValue placeholder="Selecciona tu carrera" />
+              </SelectTrigger>
+              <SelectContent>
+                <SelectItem value="IIS">Ingeniería en Sistemas Computacionales</SelectItem>
+                <SelectItem value="IE">Ingeniería Electrónica</SelectItem>
+                <SelectItem value="IM">Ingeniería Mecatrónica</SelectItem>
+                <SelectItem value="II">Ingeniería Industrial</SelectItem>
+                <SelectItem value="IC">Ingeniería Civil</SelectItem>
+                <SelectItem value="IQ">Ingeniería Química</SelectItem>
+              </SelectContent>
+            </Select>
+          </div>
+        </CardContent>
+        <CardFooter>
           <Button type="submit" className="w-full" disabled={isLoading}>
             {isLoading ? 'Registrando...' : 'Registrarse'}
           </Button>
-        </form>
-      </CardContent>
-      <CardFooter className="flex justify-center">
-        <div className="text-sm text-gray-600">
-          ¿Ya tienes una cuenta?{" "}
-          <Link to="/login" className="font-semibold text-expo-blue hover:text-expo-lightblue">
-            Iniciar sesión
-          </Link>
-        </div>
-      </CardFooter>
+        </CardFooter>
+      </form>
     </Card>
   );
 };

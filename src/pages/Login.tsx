@@ -1,10 +1,32 @@
-
-import React, { useState } from 'react';
+import React, { useEffect } from 'react';
+import { Navigate, useLocation } from 'react-router-dom';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import LoginForm from '@/components/LoginForm';
 import RegisterForm from '@/components/RegisterForm';
 
+// Componente para verificar si el usuario está autenticado
+const ProtectedRoute = ({ children }: { children: React.ReactNode }) => {
+  const token = localStorage.getItem('userToken');
+  const location = useLocation();
+
+  if (!token) {
+    // Redirigir al login si no hay token, guardando la ruta actual
+    return <Navigate to="/login" state={{ from: location }} replace />;
+  }
+
+  return <>{children}</>;
+};
+
 const Login = () => {
+  // Verificar si ya hay un token al cargar la página
+  useEffect(() => {
+    const token = localStorage.getItem('userToken');
+    if (token) {
+      // Si hay un token, redirigir al dashboard
+      window.location.href = '/dashboard';
+    }
+  }, []);
+
   return (
     <div className="min-h-screen pt-32 pb-16 bg-expo-lightgray">
       <div className="container mx-auto px-4">
@@ -29,4 +51,5 @@ const Login = () => {
   );
 };
 
+export { ProtectedRoute };
 export default Login;
