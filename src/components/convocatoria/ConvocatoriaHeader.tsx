@@ -12,7 +12,15 @@ const ConvocatoriaHeader = () => {
         <div className="text-2xl font-semibold uppercase tracking-wider mb-6">INVITA</div>
         
         <p className="text-xl mb-6 max-w-2xl mx-auto">
-          a todas y todos sus estudiantes con el apoyo de sus docentes, a postularse como expositores en la quinta edición de
+          A todas y todos sus estudiantes con el apoyo de sus docentes, a postularse como expositores en la quinta edición de
+        </p>
+
+        <h3 className="text-3xl md:text-4xl font-bold mb-6 leading-tight text-white">
+          Expo Ingenierías 
+        </h3>
+
+        <p className="text-xl mb-6 max-w-2xl mx-auto">
+         Que se llevará a cabo en: 
         </p>
         
         <div className="bg-white bg-opacity-20 rounded-xl p-6 inline-block mb-8">
@@ -28,15 +36,25 @@ const ConvocatoriaHeader = () => {
         </div>
 
 
-        <div>
+        <div className="flex items-center justify-center gap-4">
           <a 
-            href="/lovable-uploads/Expo-FJ25.pdf"
+            href="/uploads/Expo-FJ25.pdf"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-block"
           >
             <Button variant="outline" className="bg-white text-expo-blue hover:bg-expo-blue hover:text-white">
               Descargar convocatoria
+            </Button>
+          </a>
+          <a 
+            href="/uploads/Template_expoingenierias_poster.pptx"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-block"
+          >
+            <Button variant="outline" className="bg-white text-expo-blue hover:bg-expo-blue hover:text-white">
+              Template Poster FJ25
             </Button>
           </a>
         </div>

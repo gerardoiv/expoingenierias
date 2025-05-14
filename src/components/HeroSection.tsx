@@ -17,7 +17,7 @@ const HeroSection = () => {
       <div
         className="absolute inset-0 z-0 bg-cover bg-center shadow-[0_0_50px_rgba(255,255,255,0.3)]"
         style={{
-          backgroundImage: "url('/lovable-uploads/IMG_5737.JPG')",
+          backgroundImage: "url('/uploads/IMG_5737.JPG')",
         }}
       ></div>
       
@@ -30,7 +30,7 @@ const HeroSection = () => {
             {/* Logo con contorno blanco */}
             <div className="relative">
               <img 
-                src="/lovable-uploads/e5965530-7698-4137-9b1f-01fb9624fde0.png" 
+                src="/uploads/e5965530-7698-4137-9b1f-01fb9624fde0.png" 
                 alt="Expo Ingenierías Logo" 
                 className="w-full max-w-lg mx-auto relative z-10"
                 style={{
@@ -46,29 +46,33 @@ const HeroSection = () => {
           </p>
           
           <div className="flex flex-col sm:flex-row justify-center gap-4">
+          {/*
             <a 
-              href="/lovable-uploads/Expo-FJ25.pdf"
+              href="/convocatoria"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-block"
             >
+            */}
+            <Link to="/convocatoria">
               <Button className="bg-expo-lightblue hover:bg-expo-blue hover:text-white px-8 py-6 text-lg">
                 Convocatoria FJ25
               </Button>
-            </a>
-            <Link to="/proyectos">
+            </Link>
+            <a 
+              href="https://forms.gle/XzDsB6oiWjaLzki27"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-block"
+            >
               <Button 
                 variant="outline" 
                 className="border-expo-blue text-expo-blue hover:bg-expo-blue hover:text-white px-8 py-6 text-lg"
               >
-                Ver Proyectos
+              ¡Registrate!
               </Button>
-            </Link>
+            </a>
           </div>
-<<<<<<< HEAD
-=======
-          
->>>>>>> 066512a335bc38ce4046b87881d3364fd54e7a71
         </div>
       </div>
       

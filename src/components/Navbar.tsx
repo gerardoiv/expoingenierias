@@ -18,7 +18,7 @@ const Navbar = () => {
     { name: 'Inicio', path: '/' },
     { name: 'Categorías', path: '/categorias' },
     { name: 'Convocatoria FJ25', path: '/convocatoria' },
-    { name: 'Proyectos', path: '/proyectos' },
+    // { name: 'Proyectos', path: '/proyectos' },
   ];
 
   useEffect(() => {
@@ -43,7 +43,7 @@ const Navbar = () => {
       <div className="container mx-auto px-4 flex justify-between items-center">
         <Link to="/" className="flex items-center">
           <img 
-            src="/lovable-uploads/e5965530-7698-4137-9b1f-01fb9624fde0.png" 
+            src="/uploads/e5965530-7698-4137-9b1f-01fb9624fde0.png" 
             alt="Expo Ingenierías Logo" 
             className="h-16 md:h-20"
           />
@@ -67,11 +67,16 @@ const Navbar = () => {
             </NavigationMenuList>
           </NavigationMenu>
 
-          <Link to="/login">
-            <Button variant="outline" className="border-expo-blue text-expo-blue hover:bg-expo-blue hover:text-white">
-              Acceso
+            <a 
+              href="https://forms.gle/XzDsB6oiWjaLzki27"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-block"
+            >
+            <Button variant="outline" className="bg-expo-lightblue text-bold text-white hover:bg-expo-blue hover:text-white">
+              Registro
             </Button>
-          </Link>
+          </a>
         </div>
 
         <div className="md:hidden flex items-center">
@@ -96,8 +101,8 @@ const Navbar = () => {
                 {link.name}
               </Link>
             ))}
-            <Link to="/login" className="pt-2" onClick={() => setIsOpen(false)}>
-              <Button className="w-full bg-expo-blue text-white hover:bg-expo-lightblue">Acceso</Button>
+            <Link to="https://forms.gle/XzDsB6oiWjaLzki27" className="pt-2" onClick={() => setIsOpen(false)}>
+              <Button className="w-full bg-expo-blue text-white hover:bg-expo-lightblue">Registro</Button>
             </Link>
           </div>
         </div>

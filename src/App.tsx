@@ -8,7 +8,6 @@ import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
-import Medalleros from "./pages/Medalleros";
 import Ganadores from "./pages/Ganadores";
 import Categorias from "./pages/Categorias";
 import Convocatoria from "./pages/Convocatoria";
@@ -25,7 +24,6 @@ const App = () => (
       <Navbar />
       <Routes>
         <Route path="/" element={<Index />} />
-        <Route path="/medalleros" element={<Medalleros />} />
         <Route path="/ganadores" element={<Ganadores />} />
         <Route path="/categorias" element={<Categorias />} />
         <Route path="/convocatoria" element={<Convocatoria />} />

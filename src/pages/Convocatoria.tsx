@@ -64,8 +64,9 @@ const Convocatoria = () => {
                   El periodo de postulación de proyectos inicia el 5 de mayo de 2025 y termina el 23 de mayo de 2025 a las 23:59 pm.
                 </p>
                 <p className="mt-2">
-                  Liga para postulación: <a href="https://expoingenierias.eicsantafe.com/" className="text-expo-blue hover:underline">
-                    https://expoingenierias.eicsantafe.com/
+                  Liga para postulación: <a href="https://forms.gle/XzDsB6oiWjaLzki27" className="text-expo-blue hover:underline"                       target="_blank"
+              rel="noopener noreferrer">
+                    https://forms.gle/XzDsB6oiWjaLzki27
                   </a>
                 </p>
               </div>

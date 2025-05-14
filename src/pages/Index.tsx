@@ -39,7 +39,7 @@ const Index = () => {
         <h2 className="section-heading">¿Qué es Expo Ingenierías?</h2>
         <div className="max-w-4xl mx-auto text-center">
           <p className="text-lg text-gray-700 mb-8">
-            Es un evento sobre inspirar, desafiar y empujar a los estudiantes más allá de sus límites fuera del aula. Se les alienta a aplicar lo aprendido en situaciones reales y a superar obstáculos con determinación. Con la próxima 4ta Expo ingenierías región CDMX edición Agosto - Diciembre 24, tenemos la magnífica oportunidad de fomentar el aprendizaje práctico, fortalecer competencias, promover colaboración y liderazgo, y dejar que el potencial de los participantes resplandezca. ¡Les invitamos a ser parte de esto!
+            Es un evento sobre inspirar, desafiar y empujar a los estudiantes más allá de sus límites fuera del aula. Se les alienta a aplicar lo aprendido en situaciones reales y a superar obstáculos con determinación. Con la próxima 5ta Expo ingenierías región CDMX edición Febrero-Junio 2025, tenemos la magnífica oportunidad de fomentar el aprendizaje práctico, fortalecer competencias, promover colaboración y liderazgo, y dejar que el potencial de los participantes resplandezca. ¡Les invitamos a ser parte de esto!
           </p>
           <div className="flex justify-center">
             <Link to="/convocatoria">

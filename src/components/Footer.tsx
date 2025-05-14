@@ -6,21 +6,8 @@ const Footer = () => {
   return (
     <footer className="bg-expo-blue text-white pt-12 pb-6">
       <div className="container mx-auto px-4">
-<<<<<<< HEAD
-        <div className="flex justify-center mb-8">
-              <img 
-                src="/lovable-uploads/e5965530-7698-4137-9b1f-01fb9624fde0.png" 
-                alt="Expo Ingenierías Logo" 
-                className="h-20 mx-auto relative z-10"
-                style={{
-                  filter: 'drop-shadow(0 0 0.2px white) drop-shadow(0 0 0.2px white) drop-shadow(0 0 0.2px white) drop-shadow(0 0 0.2px white)',
-                }}
-              />
-        </div>
-=======
-
->>>>>>> 066512a335bc38ce4046b87881d3364fd54e7a71
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+          {/*
           <div>
             <h3 className="text-xl font-bold mb-4 text-white">Expo Ingenierías</h3>
             <p className="text-gray-300">
@@ -56,22 +43,11 @@ const Footer = () => {
               </a>
             </div>
           </div>
+            */}
         </div>
-        
         <div className="border-t border-gray-700 pt-6 text-center text-gray-300 text-sm">
-          <p>Organizada y administrada por la Escuela de Ingeniería y Ciencias de Campus Santa Fe.</p>
+          <p>Organizada y administrada por la alumnos de la Escuela de Ingeniería y Ciencias de Campus Santa Fe.</p>
           <p className="mt-2">© {new Date().getFullYear()} por Expo Ingenierías región CDMX.</p>
-          <p className="mt-2">
-            Creada por{' '}
-            <a 
-              href="https://www.astrawebdevelopers.com" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="text-expo-lightblue hover:text-white transition-colors"
-            >
-              Astra Web Developers
-            </a>
-          </p>
         </div>
       </div>
     </footer>
